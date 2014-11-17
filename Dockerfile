@@ -7,7 +7,7 @@ FROM snasello/java:busybox-java8u20
 
 MAINTAINER Samuel Nasello <samuel.nasello@elosi.com>
 
-ENV ES_VERSION 1.3.0
+ENV ES_VERSION 1.3.5
 ENV ES_HOME /elasticsearch
 
 # Install ElasticSearch.
