@@ -7,11 +7,11 @@ FROM snasello/java:debian-java8u25
 
 MAINTAINER Samuel Nasello <samuel.nasello@elosi.com>
 
-ENV ES_VERSION 1.3.0
+ENV ES_VERSION 1.3.5
 ENV ES_HOME /elasticsearch
 
 # Install ElasticSearch.
-RUN wget --quiet http://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-${ES_VERSION}.tar.gz -O /elasticsearch-${ES_VERSION}.tar.gz \
+RUN curl -kLOH "" http://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-${ES_VERSION}.tar.gz \
 	&& tar xfz /elasticsearch-${ES_VERSION}.tar.gz -C / \
 	&& rm -f /elasticsearch-${ES_VERSION}.tar.gz \
 	&& ln -s  /elasticsearch-${ES_VERSION} ${ES_HOME}
